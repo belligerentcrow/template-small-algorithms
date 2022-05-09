@@ -1,7 +1,7 @@
 #include <iostream>
-#include "algorithmsHeader.h"
+//#include "algorithmsHeader.h"
 
-template <class T>
+template <typename T>
 
 //Search Algorithms
 
@@ -14,7 +14,7 @@ int ricercaLineare(T vec[], int dim, T key){
     return -1;
 };
 
-template <class T>
+template <typename T>
 int binarySearch(T vec[], int low, int high, T key){
     int central; 
     T centralValue; 
@@ -36,8 +36,8 @@ int binarySearch(T vec[], int low, int high, T key){
 
 //Insertion Sort
 
-template <class T>
-void insertionSort(T vec[], int n){
+template <typename T>
+void insertionSort(T &vec, int n){
     T aux; 
     for(short i = 1; i < n; i++){
         aux = vec[i]; 
@@ -53,7 +53,7 @@ void insertionSort(T vec[], int n){
 
 //Selection Sort
 
-template <class T>
+template <typename T>
 void selectionSort(T vec[], short n){
     T aux; 
     short posmin; 
@@ -75,7 +75,7 @@ void selectionSort(T vec[], short n){
 
 //Bubblesort
 
-template <class T>
+template <typename T>
 void bubbleSort(T vec[], short n){
     T aux; 
     bool swap; 
@@ -96,11 +96,11 @@ void bubbleSort(T vec[], short n){
 
 //Quicksort
 
-template <class T>
+template <typename T>
 void quickSort(T * vec, int n){
     quickSort(vec, 0, n-1);
 }
-template <class T>
+template <typename T>
 void quickSort(T vec[], int s, int d){
     int i = s, j = d; 
     T tmp; 
